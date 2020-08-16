@@ -1,0 +1,739 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		240B33C521888F7F00CB0B44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B33C421888F7F00CB0B44 /* AppDelegate.swift */; };
+		240B33C721888F7F00CB0B44 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B33C621888F7F00CB0B44 /* TableViewController.swift */; };
+		240B33CA21888F7F00CB0B44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 240B33C821888F7F00CB0B44 /* Main.storyboard */; };
+		240B33CC21888F7F00CB0B44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 240B33CB21888F7F00CB0B44 /* Assets.xcassets */; };
+		240B33CF21888F7F00CB0B44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 240B33CD21888F7F00CB0B44 /* LaunchScreen.storyboard */; };
+		240B33DD21888FE600CB0B44 /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B33DC21888FE600CB0B44 /* PacketTunnelProvider.swift */; };
+		240B33E221888FE600CB0B44 /* PacketTunnel.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 240B33DA21888FE600CB0B44 /* PacketTunnel.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		240B33E82188907600CB0B44 /* VPNManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B33E72188907600CB0B44 /* VPNManager.swift */; };
+		240B33EB218897A400CB0B44 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240B33EA218897A400CB0B44 /* NetworkExtension.framework */; };
+		240B33EC2188980900CB0B44 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240B33EA218897A400CB0B44 /* NetworkExtension.framework */; };
+		24B9C1F124DE67AE0057293C /* ProxyConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 24B9C1EF24DE67AE0057293C /* ProxyConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24B9C1F424DE67AE0057293C /* ProxyConfig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24B9C1ED24DE67AE0057293C /* ProxyConfig.framework */; };
+		24B9C1F524DE67AE0057293C /* ProxyConfig.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 24B9C1ED24DE67AE0057293C /* ProxyConfig.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		24B9C1FA24DE67BD0057293C /* ProxyConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B9C1F924DE67BD0057293C /* ProxyConfig.swift */; };
+		24B9C20124DEE15B0057293C /* libtun2socks.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24B9C20024DEE15B0057293C /* libtun2socks.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		240B33E021888FE600CB0B44 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 240B33B921888F7F00CB0B44 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 240B33D921888FE600CB0B44;
+			remoteInfo = PacketTunnel;
+		};
+		24B9C1F224DE67AE0057293C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 240B33B921888F7F00CB0B44 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 24B9C1EC24DE67AE0057293C;
+			remoteInfo = ProxyConfig;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		240B33E621888FE600CB0B44 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				240B33E221888FE600CB0B44 /* PacketTunnel.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		240B34252189A99500CB0B44 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				24B9C1F524DE67AE0057293C /* ProxyConfig.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		240B33C121888F7F00CB0B44 /* tun2socks-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tun2socks-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		240B33C421888F7F00CB0B44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		240B33C621888F7F00CB0B44 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		240B33C921888F7F00CB0B44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		240B33CB21888F7F00CB0B44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		240B33CE21888F7F00CB0B44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		240B33D021888F7F00CB0B44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		240B33DA21888FE600CB0B44 /* PacketTunnel.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PacketTunnel.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		240B33DC21888FE600CB0B44 /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
+		240B33DE21888FE600CB0B44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		240B33DF21888FE600CB0B44 /* PacketTunnel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PacketTunnel.entitlements; sourceTree = "<group>"; };
+		240B33E72188907600CB0B44 /* VPNManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNManager.swift; sourceTree = "<group>"; };
+		240B33EA218897A400CB0B44 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		240B33ED2188980900CB0B44 /* tun2socks-ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "tun2socks-ios.entitlements"; sourceTree = "<group>"; };
+		24B9C1ED24DE67AE0057293C /* ProxyConfig.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProxyConfig.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		24B9C1EF24DE67AE0057293C /* ProxyConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProxyConfig.h; sourceTree = "<group>"; };
+		24B9C1F024DE67AE0057293C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24B9C1F924DE67BD0057293C /* ProxyConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyConfig.swift; sourceTree = "<group>"; };
+		24B9C1FC24DEDED70057293C /* tun2socks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tun2socks.h; sourceTree = "<group>"; };
+		24B9C1FF24DEDF270057293C /* Tun2socks-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tun2socks-Bridging-Header.h"; sourceTree = "<group>"; };
+		24B9C20024DEE15B0057293C /* libtun2socks.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtun2socks.a; path = "../../../../rust/tun2socks-rs/target/universal/release/libtun2socks.a"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		240B33BE21888F7F00CB0B44 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				240B33EC2188980900CB0B44 /* NetworkExtension.framework in Frameworks */,
+				24B9C1F424DE67AE0057293C /* ProxyConfig.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		240B33D721888FE600CB0B44 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24B9C20124DEE15B0057293C /* libtun2socks.a in Frameworks */,
+				240B33EB218897A400CB0B44 /* NetworkExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24B9C1EA24DE67AE0057293C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		240B33B821888F7F00CB0B44 = {
+			isa = PBXGroup;
+			children = (
+				240B33C321888F7F00CB0B44 /* tun2socks-ios */,
+				240B33DB21888FE600CB0B44 /* PacketTunnel */,
+				24B9C1EE24DE67AE0057293C /* ProxyConfig */,
+				240B33C221888F7F00CB0B44 /* Products */,
+				240B33E9218897A400CB0B44 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		240B33C221888F7F00CB0B44 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				240B33C121888F7F00CB0B44 /* tun2socks-ios.app */,
+				240B33DA21888FE600CB0B44 /* PacketTunnel.appex */,
+				24B9C1ED24DE67AE0057293C /* ProxyConfig.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		240B33C321888F7F00CB0B44 /* tun2socks-ios */ = {
+			isa = PBXGroup;
+			children = (
+				240B33ED2188980900CB0B44 /* tun2socks-ios.entitlements */,
+				240B33C421888F7F00CB0B44 /* AppDelegate.swift */,
+				240B33C621888F7F00CB0B44 /* TableViewController.swift */,
+				240B33C821888F7F00CB0B44 /* Main.storyboard */,
+				240B33CB21888F7F00CB0B44 /* Assets.xcassets */,
+				240B33CD21888F7F00CB0B44 /* LaunchScreen.storyboard */,
+				240B33D021888F7F00CB0B44 /* Info.plist */,
+				240B33E72188907600CB0B44 /* VPNManager.swift */,
+			);
+			path = "tun2socks-ios";
+			sourceTree = "<group>";
+		};
+		240B33DB21888FE600CB0B44 /* PacketTunnel */ = {
+			isa = PBXGroup;
+			children = (
+				24B9C1FB24DEDEB40057293C /* libtun2socks */,
+				240B33DC21888FE600CB0B44 /* PacketTunnelProvider.swift */,
+				240B33DE21888FE600CB0B44 /* Info.plist */,
+				240B33DF21888FE600CB0B44 /* PacketTunnel.entitlements */,
+				24B9C1FF24DEDF270057293C /* Tun2socks-Bridging-Header.h */,
+			);
+			path = PacketTunnel;
+			sourceTree = "<group>";
+		};
+		240B33E9218897A400CB0B44 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				240B33EA218897A400CB0B44 /* NetworkExtension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		24B9C1EE24DE67AE0057293C /* ProxyConfig */ = {
+			isa = PBXGroup;
+			children = (
+				24B9C1EF24DE67AE0057293C /* ProxyConfig.h */,
+				24B9C1F024DE67AE0057293C /* Info.plist */,
+				24B9C1F924DE67BD0057293C /* ProxyConfig.swift */,
+			);
+			path = ProxyConfig;
+			sourceTree = "<group>";
+		};
+		24B9C1FB24DEDEB40057293C /* libtun2socks */ = {
+			isa = PBXGroup;
+			children = (
+				24B9C20024DEE15B0057293C /* libtun2socks.a */,
+				24B9C1FC24DEDED70057293C /* tun2socks.h */,
+			);
+			path = libtun2socks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		24B9C1E824DE67AE0057293C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24B9C1F124DE67AE0057293C /* ProxyConfig.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		240B33C021888F7F00CB0B44 /* tun2socks-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 240B33D321888F7F00CB0B44 /* Build configuration list for PBXNativeTarget "tun2socks-ios" */;
+			buildPhases = (
+				240B33BD21888F7F00CB0B44 /* Sources */,
+				240B33BE21888F7F00CB0B44 /* Frameworks */,
+				240B33BF21888F7F00CB0B44 /* Resources */,
+				240B33E621888FE600CB0B44 /* Embed App Extensions */,
+				240B34252189A99500CB0B44 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				240B33E121888FE600CB0B44 /* PBXTargetDependency */,
+				24B9C1F324DE67AE0057293C /* PBXTargetDependency */,
+			);
+			name = "tun2socks-ios";
+			productName = "tun2socks-ios";
+			productReference = 240B33C121888F7F00CB0B44 /* tun2socks-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		240B33D921888FE600CB0B44 /* PacketTunnel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 240B33E321888FE600CB0B44 /* Build configuration list for PBXNativeTarget "PacketTunnel" */;
+			buildPhases = (
+				240B33D621888FE600CB0B44 /* Sources */,
+				240B33D721888FE600CB0B44 /* Frameworks */,
+				240B33D821888FE600CB0B44 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PacketTunnel;
+			productName = PacketTunnel;
+			productReference = 240B33DA21888FE600CB0B44 /* PacketTunnel.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		24B9C1EC24DE67AE0057293C /* ProxyConfig */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24B9C1F624DE67AF0057293C /* Build configuration list for PBXNativeTarget "ProxyConfig" */;
+			buildPhases = (
+				24B9C1E824DE67AE0057293C /* Headers */,
+				24B9C1E924DE67AE0057293C /* Sources */,
+				24B9C1EA24DE67AE0057293C /* Frameworks */,
+				24B9C1EB24DE67AE0057293C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ProxyConfig;
+			productName = ProxyConfig;
+			productReference = 24B9C1ED24DE67AE0057293C /* ProxyConfig.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		240B33B921888F7F00CB0B44 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "";
+				TargetAttributes = {
+					240B33C021888F7F00CB0B44 = {
+						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.NetworkExtensions.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					240B33D921888FE600CB0B44 = {
+						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.NetworkExtensions.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					24B9C1EC24DE67AE0057293C = {
+						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
+					};
+				};
+			};
+			buildConfigurationList = 240B33BC21888F7F00CB0B44 /* Build configuration list for PBXProject "tun2socks-ios" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 240B33B821888F7F00CB0B44;
+			productRefGroup = 240B33C221888F7F00CB0B44 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				24B9C1EC24DE67AE0057293C /* ProxyConfig */,
+				240B33C021888F7F00CB0B44 /* tun2socks-ios */,
+				240B33D921888FE600CB0B44 /* PacketTunnel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		240B33BF21888F7F00CB0B44 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				240B33CF21888F7F00CB0B44 /* LaunchScreen.storyboard in Resources */,
+				240B33CC21888F7F00CB0B44 /* Assets.xcassets in Resources */,
+				240B33CA21888F7F00CB0B44 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		240B33D821888FE600CB0B44 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24B9C1EB24DE67AE0057293C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		240B33BD21888F7F00CB0B44 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				240B33C721888F7F00CB0B44 /* TableViewController.swift in Sources */,
+				240B33E82188907600CB0B44 /* VPNManager.swift in Sources */,
+				240B33C521888F7F00CB0B44 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		240B33D621888FE600CB0B44 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				240B33DD21888FE600CB0B44 /* PacketTunnelProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24B9C1E924DE67AE0057293C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24B9C1FA24DE67BD0057293C /* ProxyConfig.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		240B33E121888FE600CB0B44 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 240B33D921888FE600CB0B44 /* PacketTunnel */;
+			targetProxy = 240B33E021888FE600CB0B44 /* PBXContainerItemProxy */;
+		};
+		24B9C1F324DE67AE0057293C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 24B9C1EC24DE67AE0057293C /* ProxyConfig */;
+			targetProxy = 24B9C1F224DE67AE0057293C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		240B33C821888F7F00CB0B44 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				240B33C921888F7F00CB0B44 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		240B33CD21888F7F00CB0B44 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				240B33CE21888F7F00CB0B44 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		240B33D121888F7F00CB0B44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		240B33D221888F7F00CB0B44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		240B33D421888F7F00CB0B44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "tun2socks-ios/tun2socks-ios.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3CH26T4C3U;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "tun2socks-ios/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "fun.kitsunebi.test.tun2socks-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		240B33D521888F7F00CB0B44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "tun2socks-ios/tun2socks-ios.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3CH26T4C3U;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "tun2socks-ios/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "fun.kitsunebi.test.tun2socks-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		240B33E421888FE600CB0B44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PacketTunnel/PacketTunnel.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3CH26T4C3U;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PacketTunnel",
+				);
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/PacketTunnel/libtun2socks";
+				INFOPLIST_FILE = PacketTunnel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PacketTunnel/libtun2socks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "fun.kitsunebi.test.tun2socks-ios.PacketTunnel";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/PacketTunnel/Tun2socks-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		240B33E521888FE600CB0B44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PacketTunnel/PacketTunnel.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3CH26T4C3U;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PacketTunnel",
+				);
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/PacketTunnel/libtun2socks";
+				INFOPLIST_FILE = PacketTunnel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PacketTunnel/libtun2socks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "fun.kitsunebi.test.tun2socks-ios.PacketTunnel";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/PacketTunnel/Tun2socks-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		24B9C1F724DE67AF0057293C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 3CH26T4C3U;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ProxyConfig/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kitslabs.test.ProxyConfig;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		24B9C1F824DE67AF0057293C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 3CH26T4C3U;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ProxyConfig/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kitslabs.test.ProxyConfig;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		240B33BC21888F7F00CB0B44 /* Build configuration list for PBXProject "tun2socks-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				240B33D121888F7F00CB0B44 /* Debug */,
+				240B33D221888F7F00CB0B44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		240B33D321888F7F00CB0B44 /* Build configuration list for PBXNativeTarget "tun2socks-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				240B33D421888F7F00CB0B44 /* Debug */,
+				240B33D521888F7F00CB0B44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		240B33E321888FE600CB0B44 /* Build configuration list for PBXNativeTarget "PacketTunnel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				240B33E421888FE600CB0B44 /* Debug */,
+				240B33E521888FE600CB0B44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24B9C1F624DE67AF0057293C /* Build configuration list for PBXNativeTarget "ProxyConfig" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24B9C1F724DE67AF0057293C /* Debug */,
+				24B9C1F824DE67AF0057293C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 240B33B921888F7F00CB0B44 /* Project object */;
+}
